@@ -191,7 +191,6 @@ RESPONSE:
 BODY:
 ```json :
 {
-
     "user_id": 5,
     "service_id": 1,
     "order_id": 1,
@@ -213,7 +212,6 @@ RESPONSE:
 BODY:
 ```json :
 {
-
     "user_id": 1,
     "service_id": 1,
     "order_id": 2,
