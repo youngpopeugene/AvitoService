@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8181:8181"
+    environment:
+      pgHost: "postgres"
+      pgPort: 5432
+      pgUser: "user1"
+      pgPassword: "user1"
+      pgDbName: "test_db"
+    depends_on:
+      - postgres
+    links:
+      - postgres
+  postgres:
+    image: postgres:15.1
+    environment:
+      POSTGRES_DB: "test_db"
+      POSTGRES_USER: "user1"
+      POSTGRES_PASSWORD: "user1"
+    ports:
+      - "5432:5432"
+    restart: always
