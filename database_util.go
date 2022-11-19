@@ -14,7 +14,6 @@ var databaseErr error
 func initiator() {
 	if !db.Migrator().HasTable("reserves") {
 		db.Table("reserves").AutoMigrate(&Reserve{})
-		db.Table("reserves")
 		fmt.Println("Table 'reserves' was created!")
 	}
 	if !db.Migrator().HasTable("users") {
