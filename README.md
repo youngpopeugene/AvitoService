@@ -13,12 +13,14 @@
 ## Как запустить ?
 ```
 git clone https://github.com/youngpopeugene/Avito_Backend_Internship_Task.git
+
 cd Avito_Backend_Internship_Task
+
 docker-compose build && docker-compose up
 ```
 
 ### Метод получения текущего баланса пользователя
-Требуется отправить GET запрос на localhost:8181/get_balance... с указанием id пользователя (...?user_id={ число })
+Требуется отправить GET запрос на localhost:8181/get_balance?user_id={ число } с указанием id пользователя
 
 #### Особенности
 * Принимает id пользователя. (Значение указано в рублях, все операции подразумевают работу с рублем, что является положительным числом, за исключением операции списания средств, она подразумевает указание отрицательного числа).
@@ -188,6 +190,7 @@ RESPONSE:
 
 BODY:
 ```json :
+{
 
     "user_id": 5,
     "service_id": 1,
@@ -209,6 +212,7 @@ RESPONSE:
 
 BODY:
 ```json :
+{
 
     "user_id": 1,
     "service_id": 1,
