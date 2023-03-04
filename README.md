@@ -12,9 +12,9 @@
 
 ## Как запустить ?
 ```
-git clone https://github.com/youngpopeugene/Avito_Backend_Internship_Task.git
+git clone https://github.com/youngpopeugene/GolangTask.git
 
-cd Avito_Backend_Internship_Task
+cd GolangTask
 
 docker-compose build && docker-compose up
 ```
